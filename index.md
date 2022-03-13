@@ -22,14 +22,14 @@ to
 <script src='https://cdn.jsdelivr.net/gh/jiangts/JS-OTP/dist/jsOTP.js'></script>
 <script>
 // hotp
-var hotp = new jsOTP.hotp();
-var hmacCode = hotp.getOtp(OTPkey, counter);
+//var hotp = new jsOTP.hotp();
+//var hmacCode = hotp.getOtp(OTPkey, counter);
 
 // totp
 var totp = new jsOTP.totp();
-var timeCode = totp.getOtp(OTPkey);
+var timeCode = totp.getOtp("OTPkey");
 
-console.log("hotp: " + hotp);
+//console.log("hotp: " + hotp);
 console.log("totp: " + totp);
 </script>
 
