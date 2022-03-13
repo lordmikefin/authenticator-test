@@ -23,7 +23,7 @@ to
 <script>
 // hotp
 var hotp = new jsOTP.hotp();
-var hmacCode = hotp.getOtp(OTPkey>, <counter>);
+var hmacCode = hotp.getOtp(OTPkey, counter);
 
 // totp
 var totp = new jsOTP.totp();
