@@ -27,7 +27,7 @@ to
 
 // totp
 var totp = new jsOTP.totp();
-var timeCode = totp.getOtp("OTPkey");
+var timeCode = totp.getOtp("f22cf12943336d8fe16335bb0cbc3f0d748aabb2");
 
 //console.log("hotp: " + hotp);
 console.log("totp: " + totp);
