@@ -32,13 +32,17 @@ to
 
 // totp
 var totp = new jsOTP.totp();
-var timeCode = totp.getOtp("f22cf12943336d8fe16335bb0cbc3f0d748aabb2");
+//var timeCode = totp.getOtp("f22cf12943336d8fe16335bb0cbc3f0d748aabb2");
 
 //console.log("hotp: " + hotp);
-console.log("totp timeCode: " + timeCode);
+//console.log("totp timeCode: " + timeCode);
 
 
 function updateTimeCode() {
+    // Update the time code
+    var timeCode = totp.getOtp("f22cf12943336d8fe16335bb0cbc3f0d748aabb2");
+    console.log("totp timeCode: " + timeCode);
+    
     // Show time code in the div element
     $( "#totp-time-code" ).text(timeCode);
 };
