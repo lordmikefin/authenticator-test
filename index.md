@@ -37,8 +37,25 @@ var timeCode = totp.getOtp("f22cf12943336d8fe16335bb0cbc3f0d748aabb2");
 //console.log("hotp: " + hotp);
 console.log("totp timeCode: " + timeCode);
 
-// Show time code in the div element
-$( "#totp-time-code" ).text(timeCode);
+
+function updateTimeCode() {
+    // Show time code in the div element
+    $( "#totp-time-code" ).text(timeCode);
+};
+
+function repeatUpdateTimeCode() {
+    updateTimeCode();
+    
+    setTimeout(function() {
+        repeatUpdateTimeCode();
+    }, 1000); // 1 sec
+};
+repeatUpdateTimeCode()
+
+// Run code after page load
+$(window).on('load', function() {
+    // code here
+});
 </script>
 
 
