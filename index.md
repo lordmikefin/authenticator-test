@@ -40,8 +40,11 @@ var totp = new jsOTP.totp();
 
 
 function updateTimeCode() {
+    let secret_hex = "f22cf12943336d8fe16335bb0cbc3f0d748aabb2";
+    let secret_base32 = "7gbk755ey5kqdzowzhjso66mwznxdsfc";
+    
     // Update the time code
-    var timeCode = totp.getOtp("f22cf12943336d8fe16335bb0cbc3f0d748aabb2");
+    var timeCode = totp.getOtp(secret_base32);
     console.log("totp timeCode: " + timeCode);
     
     // Show time code in the div element
