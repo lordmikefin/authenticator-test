@@ -22,6 +22,12 @@ to
   https://cdn.jsdelivr.net/gh/myusername/myrepo/style.css
 -->
 
+<!--
+TODO: generate 2fa qrcode
+
+https://github.com/stefansundin/2fa-qr/blob/gh-pages/index.html
+-->
+
 <script src='https://cdn.jsdelivr.net/gh/jquery/jquery@3.6.0/dist/jquery.min.js'></script>
 
 <script src='https://cdn.jsdelivr.net/gh/jiangts/JS-OTP/dist/jsOTP.js'></script>
