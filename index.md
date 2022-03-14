@@ -22,12 +22,6 @@ to
   https://cdn.jsdelivr.net/gh/myusername/myrepo/style.css
 -->
 
-<!--
-TODO: generate 2fa qrcode
-
-https://github.com/stefansundin/2fa-qr/blob/gh-pages/index.html
--->
-
 <script src='https://cdn.jsdelivr.net/gh/jquery/jquery@3.6.0/dist/jquery.min.js'></script>
 
 <script src='https://cdn.jsdelivr.net/gh/jiangts/JS-OTP/dist/jsOTP.js'></script>
@@ -66,6 +60,17 @@ repeatUpdateTimeCode()
 $(window).on('load', function() {
     // code here
 });
+</script>
+
+
+<!--
+TODO: generate 2fa qrcode
+
+https://github.com/stefansundin/2fa-qr/blob/gh-pages/index.html
+-->
+
+<script src="https://cdn.jsdelivr.net/gh/lrsjng/jquery-qrcode@v0.18.0/dist/jquery-qrcode.min.js"></script>
+<script>
 </script>
 
 
