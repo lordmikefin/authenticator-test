@@ -115,7 +115,7 @@ function update_qr() {
   */
 }
 
-update_uri();
+update_qr();
 </script>
 
 
