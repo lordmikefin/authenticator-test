@@ -84,7 +84,7 @@ function generate_uri() {
   let secret_base32 = "7gbk755ey5kqdzowzhjso66mwznxdsfc";
   
   //let s = `otpauth://totp/Label?secret=${secret_hex}&issuer=Issuer&algorithm=SHA1&digits=6&period=30`;
-  let s = `otpauth://totp/Label?secret=${secret_base32}&issuer=Issuer&algorithm=SHA1&digits=6&period=30`;
+  let s = `otpauth://totp/TestSHA1?secret=${secret_base32}&issuer=Issuer&algorithm=SHA1&digits=6&period=30`;
   /*
   let s = `otpauth://${type.value}/${encodeURIComponent(label.value)}?secret=${secret.value.replace(/ /g, '')}`;
   if (issuer.value !== "") {
