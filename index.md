@@ -4,6 +4,7 @@
 
 <div id="totp-time-code">code test</div>
 
+<div id="qr"></div>
 
 <!--
 https://github.com/jiangts/JS-OTP
@@ -71,6 +72,55 @@ https://github.com/stefansundin/2fa-qr/blob/gh-pages/index.html
 
 <script src="https://cdn.jsdelivr.net/gh/lrsjng/jquery-qrcode@v0.18.0/dist/jquery-qrcode.min.js"></script>
 <script>
+
+function generate_uri() {
+  let secret-hex = "f22cf12943336d8fe16335bb0cbc3f0d748aabb2";
+  
+  let s = `otpauth://totp/Label?secret=${secret-hex}&issuer=Issuer&algorithm=SHA1&digits=6&period=30`;
+  /*
+  let s = `otpauth://${type.value}/${encodeURIComponent(label.value)}?secret=${secret.value.replace(/ /g, '')}`;
+  if (issuer.value !== "") {
+    s += `&issuer=${encodeURIComponent(issuer.value)}`;
+  }
+  if (type.value === "hotp") {
+    s += `&counter=${counter.value || "0"}`;
+  }
+  if (advanced_options.checked) {
+    s += `&algorithm=${algorithm.value}&digits=${digits.value}`;
+    if (type.value === "totp") {
+      s += `&period=${period.value || "30"}`;
+    }
+  }
+  */
+  return s;
+}
+
+function update_qr() {
+  $("#qr").empty().qrcode({
+    text: generate_uri(),
+    size: 300,
+  });
+  /*
+  $("#qr").empty().qrcode({
+    text: uri.value,
+    size: size.value,
+  });
+
+  if (label.value === "" && issuer.value === "") {
+    app_label.textContent = "Issuer (label)";
+  }
+  else {
+    app_label.textContent = issuer.value === "" ? label.value : `${issuer.value} (${label.value})`;
+  }
+  */
+}
+
+update_uri();
 </script>
+
+
+
+
+
 
 
