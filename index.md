@@ -68,6 +68,9 @@ $(window).on('load', function() {
 TODO: generate 2fa qrcode
 
 https://github.com/stefansundin/2fa-qr/blob/gh-pages/index.html
+
+https://jwessel.github.io/totp-gauth-token/QR_generator.html
+https://www.xanxys.net/totp/
 -->
 
 <script src="https://cdn.jsdelivr.net/gh/lrsjng/jquery-qrcode@v0.18.0/dist/jquery-qrcode.min.js"></script>
@@ -75,8 +78,10 @@ https://github.com/stefansundin/2fa-qr/blob/gh-pages/index.html
 
 function generate_uri() {
   let secret_hex = "f22cf12943336d8fe16335bb0cbc3f0d748aabb2";
+  let secret_base32 = "7gbk755ey5kqdzowzhjso66mwznxdsfc";
   
-  let s = `otpauth://totp/Label?secret=${secret_hex}&issuer=Issuer&algorithm=SHA1&digits=6&period=30`;
+  //let s = `otpauth://totp/Label?secret=${secret_hex}&issuer=Issuer&algorithm=SHA1&digits=6&period=30`;
+  let s = `otpauth://totp/Label?secret=${secret_base32}&issuer=Issuer&algorithm=SHA1&digits=6&period=30`;
   /*
   let s = `otpauth://${type.value}/${encodeURIComponent(label.value)}?secret=${secret.value.replace(/ /g, '')}`;
   if (issuer.value !== "") {
